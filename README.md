@@ -90,6 +90,6 @@ When beggining to learn JAVA or Spring Boot it is recommended to use Maven inste
 
 TODO
 
-# *Repo is under MIT license so you're free to use pretty much everything from this repository :)*
+
 
 
