@@ -22,9 +22,9 @@ public class LoginSuccessListener implements ApplicationListener<InteractiveAuth
     public void onApplicationEvent(InteractiveAuthenticationSuccessEvent event) {
         OAuth2User oAuth2User = (OAuth2User) event.getAuthentication().getPrincipal();
 
-        OAuth2Client oAuth2Client = new OAuth2Client();
-        oAuth2Client.setName(oAuth2User.getAttribute("name"));
-        oAuth2Client.setEmail(oAuth2User.getAttribute("email"));
+        OAuth2Client oAuth2Client = new OAuth2Client(
+                oAuth2User.getAttribute("email"), oAuth2User.getAttribute("name")
+        );
 
         oAuth2ClientService.addOAuth2Client(oAuth2Client);
     }
