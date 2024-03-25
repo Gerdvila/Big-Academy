@@ -18,11 +18,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .authorizeHttpRequests(authorizeRequests ->
-                authorizeRequests
-                    .requestMatchers("/","/public/**").permitAll()
-                    .anyRequest().authenticated())
-            .oauth2Login(withDefaults());
+                .authorizeHttpRequests(authorizeRequests ->
+                        authorizeRequests
+                                .requestMatchers("/", "/public/**").permitAll()
+                                .anyRequest().authenticated())
+                .oauth2Login(withDefaults());
 
         return http.build();
     }

@@ -1,7 +1,6 @@
 package com.google.login.demo.oauth2client;
 
 
-
 import com.google.login.demo.oauth2client.OAuth2Client;
 import com.google.login.demo.oauth2client.OAuth2ClientRepository;
 import org.springframework.stereotype.Service;
