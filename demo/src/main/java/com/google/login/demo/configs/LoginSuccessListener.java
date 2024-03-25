@@ -7,8 +7,6 @@ import org.springframework.security.authentication.event.InteractiveAuthenticati
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
 
-import static java.nio.file.Files.getAttribute;
-
 @Component
 public class LoginSuccessListener implements ApplicationListener<InteractiveAuthenticationSuccessEvent> {
 
