@@ -1,4 +1,14 @@
-@for (pokemon of pokemons(); track pokemon.id){
+<app-search
+  (searchQuery)="setFilter($event)"
+
+/>
+<app-sort
+  (selectQuery)="setSort($event)"
+/>
+
+
+
+@for (pokemon of pokemons() | filterPokemons : query | sortPokemons : sortQuery; track pokemon.id){
   <app-card [data]="pokemon" />
 } @empty {
   Loading...

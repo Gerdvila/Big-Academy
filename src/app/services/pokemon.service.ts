@@ -12,7 +12,7 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Pokemon[]> {
-    const indices = Array.from({length: 26}, (_, i) => i + 1);
+    const indices = Array.from({length: 150}, (_, i) => i + 1);
     const requests = indices.map(index =>
       this.http.get<Pokemon>(`${this.pokemonsUrl}${index}`));
 
